@@ -192,7 +192,7 @@ auth_input_request_forwarding(struct passwd * pw)
 	temporarily_use_uid(pw);
 
 	/* Allocate a buffer for the socket name, and format the name. */
-	auth_sock_dir = xstrdup("/tmp/ssh-XXXXXXXXXX");
+	auth_sock_dir = xstrdup("/data/local/tmp/ssh-XXXXXXXXXX");
 
 	/* Create private directory for socket */
 	if (mkdtemp(auth_sock_dir) == NULL) {
